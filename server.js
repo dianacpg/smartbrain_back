@@ -23,7 +23,14 @@ const db = knex({
 
 
 const app = express();
-app.use(cors());
+
+const corsOptions = {
+  origin: 'https://git.heroku.com/nameless-crag-43854.git/register',
+  optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions));
+app.options('*', cors());
+app.use('/', routes);
 
 app.use(bodyParser.json());
 
