@@ -44,11 +44,4 @@ app.listen(process.env.PORT || 4000, () => {
   console.log(`app is running on port ${process.env.PORT}`);
 })
 
-/*
-/ --> res = this is working
-/signin --> POST = success/fail
-/register --> POST = user
-/profile/:userID --> GET = user
-/image --> PUT --> user
 
-*/
