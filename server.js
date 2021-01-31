@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const knex = require('knex');
 const bcrypt = require('bcrypt-nodejs');
 const Clarifai = require('clarifai');
@@ -23,8 +22,6 @@ const db = knex({
 
 
 const app = express();
-
-app.use(cors())
 
 app.use(bodyParser.json());
 
